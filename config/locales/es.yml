@@ -1,0 +1,26 @@
+es:
+  activerecord:
+    models:
+      user: 'Usuario'
+    attributes:
+      user:
+        login:                  'Cuenta'
+        password:               'Contraseña'
+        password_confirmation:  'Confirmación de contraseña'
+        username:               'Nombre de usuario'
+        email:                  'Correo eléctronico'
+        remember_me:            'Recordarme'
+
+  placeholders:
+    login_explanation: 'nombre de usuario ó correo eléctronico'
+
+  links:
+    sessions:
+      sign_in: 'Iniciar sesión'
+    registrations:
+      forgot_password:  '¿Olvidaste tu contraseña?'
+      sign_up:          'Registrarte'
+    confirmations:
+      no_instructions:  '¿No recibio las instrucciones de confirmación?'
+    unlocks:
+      no_instructions:  '¿No recibio las instrucciones de desbloqueo?'

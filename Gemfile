@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.7'
 gem 'client_side_validations', '3.0.2'
 gem 'kaminari'
-gem 'compass'
+gem 'compass', ">= 0.11.1"
 gem 'devise'
 gem 'jquery-rails'
 gem 'acl9'

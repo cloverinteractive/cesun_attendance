@@ -1,0 +1,51 @@
+@import "compass";
+
+html body {
+  font: 13.34px helvetica,arial,freesans,clean,sans-serif;
+}
+
+#login_box {
+  background-color: #E9F1F4;
+  border: 2px solid #405A6A;
+  color: #333333;
+  margin: 80px auto 0pt;
+  width: 450px;
+  @include border-radius();
+
+  h1 {
+    background-color: #405A6A;
+    border-bottom: 2px solid #405A6A;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 5px;
+    text-align: center;
+    width: 440px;
+  }
+
+  label {
+    display: block;
+    margin: 5px 0pt;
+    padding: 0pt 15px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  input {
+    border: 1px solid #666666;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    padding: 5px;
+  }
+
+  input[type="text"], input[type="password"], input[type="submit"] {
+    width: 200px;
+  }
+
+  #grouped_controls {
+    padding: 5px 0pt;
+
+    label { float: left; }
+  }
+}
