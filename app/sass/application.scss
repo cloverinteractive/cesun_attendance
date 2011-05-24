@@ -1,0 +1,124 @@
+@import "compass";
+@import "compass/reset";
+@import "blueprint/fancy-type";
+
+@charset "utf-8";
+
+#wrapper {
+  width: 980px;
+  margin: 80px auto 0;
+  position: relative;
+  padding: 10px 0;
+  background-color: #F3F5ED;
+  border: 1px solid gray;
+  @include border_radius();
+
+  a {
+    color: #3979A1;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  a:hover { text-decoration: underline; }
+
+  #nav {
+    float: left;
+
+    a {
+      background-color: #6D9BBB;
+      padding: 10px 15px;
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #3979a1;
+      @include border-radius();
+    }
+
+    a.selected { background-color: #3979A1; }
+
+    a:hover {
+      background-color: #3979A1;
+    }
+  }
+
+  #account_info {
+    position: absolute;
+    right: 50px;
+  }
+}
+
+#page_content {
+  margin-top: 50px;
+  padding: 0 10px;
+
+  table {
+    width: 100%;
+    border: 1px solid #3979A1;
+
+    tr td {
+      padding: 5px 10px;
+    }
+
+    tr.odd td {
+      background-color: #fff;
+      color: #333;
+    }
+
+    tr.even td {
+      background-color: #6D9BBB;
+      color: #fff;
+    }
+
+    thead tr th{
+      background-color: #3979A1;
+      padding: 10px;
+      color: #fff;
+      text-align: left;
+    }
+  }
+
+  #tool_bar {
+    width: 100%;
+    padding: 5px 0;
+    margin-bottom: 50px;
+    background-color: #6D9BBB;
+
+    #teacher_info {
+      float: left;
+      color: #fff;
+      padding: 0 15px;
+    }
+
+    #search_box {
+      float: right;
+      margin-right: 15px;
+    }
+
+    label {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 5px;
+      border: 1px solid #3979A1;
+    }
+  }
+}
+
+
+.column {
+  width: 50%;
+  float: left;
+}
+
+.column #image_frame {
+    background-color: #FFFFFF;
+    border: 1px solid #333333;
+    height: 140px;
+    margin: 5px 5px 5px 29px;
+    width: 175px;
+}
+
+.clear {
+  clear: both;
+}

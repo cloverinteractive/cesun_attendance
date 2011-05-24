@@ -164,7 +164,7 @@ PLATFORMS
 DEPENDENCIES
   acl9
   client_side_validations (= 3.0.2)
-  compass
+  compass (>= 0.11.1)
   devise
   factory_girl_rails
   jquery-rails
