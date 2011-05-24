@@ -6,6 +6,7 @@ gem 'kaminari'
 gem 'compass'
 gem 'devise'
 gem 'jquery-rails'
+gem 'acl9'
 
 group :test do
   gem 'factory_girl_rails'
