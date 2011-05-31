@@ -1,9 +1,14 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'authentication' %>
+<% end %>
+
 <div id="login_box">
   <h1>Sign in</h1>
+
   <div class="column">
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-      <%= f.label :login %>
-      <%= f.text_field :login %>
+      <%= f.label       :login %>
+      <%= f.text_field  :login, :placeholder => t('placeholders.login_explanation')  %>
 
       <%= f.label :password %>
       <%= f.password_field :password %>

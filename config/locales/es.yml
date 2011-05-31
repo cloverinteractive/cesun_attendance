@@ -1,0 +1,15 @@
+es:
+  activerecord:
+    models:
+      user: 'Usuario'
+    attributes:
+      user:
+        login:                  'Cuenta'
+        password:               'Contraseña'
+        password_confirmation:  'Confirmación de contraseña'
+        username:               'Nombre de usuario'
+        email:                  'Correo eléctronico'
+        remember_me:            'Recordarme'
+
+  placeholders:
+    login_explanation: 'nombre de usuario ó correo eléctronico'

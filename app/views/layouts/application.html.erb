@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>CESUN Asistencia</title>
-    <%= stylesheet_link_tag :all %>
+    <%= stylesheet_link_tag 'application' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tag %>
     <%= yield :head %>
@@ -10,7 +10,7 @@
   </head>
   <body>
     <div id="heading"></div>
-    <% if devise_controller? %>
+    <% if devise_controller? and controller_name == 'sessions' and action_name == 'new' %>
       <%= yield %>
     <% else %>
       <div id="wrapper">

@@ -4,6 +4,12 @@
 
 @charset "utf-8";
 
+#heading {
+  background-color: #3979A1;
+  height: 49px;
+  width: 100%;
+}
+
 #wrapper {
   width: 980px;
   margin: 80px auto 0;
@@ -104,7 +110,6 @@
     }
   }
 }
-
 
 .column {
   width: 50%;

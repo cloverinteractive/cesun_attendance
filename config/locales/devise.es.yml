@@ -1,0 +1,50 @@
+# Additional translations at http://github.com/plataformatec/devise/wiki/I18n
+
+es:
+  errors:
+    messages:
+      expired: "ha expirado, por favor solicite una nueva"
+      not_found: "no encontrado"
+      already_confirmed: "ya ha sido confirmado, por favor intente iniciar sesión"
+      not_locked: "not fue bloqueado"
+      not_saved:
+        one: "1 error no permitio que este %{resource} fuera guardado:"
+        other: "%{count} errores no permitieron que %{resource} fuera guardado:"
+
+  devise:
+    failure:
+      already_authenticated: 'Usted ya ha iniciado sesión.'
+      unauthenticated: 'Necesitas iniciar sesión o registrarte antes de continuar.'
+      unconfirmed: 'Necesitas confirmar tu cuenta antes de continuar.'
+      locked: 'Tu cuenta esta bloqueada.'
+      invalid: 'Cuenta o contraseña invalidas.'
+      invalid_token: 'Token de autenticación invalido.'
+      timeout: 'Tu sesión ha expirado, por favor inicia sesión de nuevo para continuar.'
+      inactive: 'Tu cuenta aun no ha sido activada.'
+    sessions:
+      signed_in: 'Inicio sesión exitosamente.'
+      signed_out: 'Cerro sesión exitosamente.'
+    passwords:
+      send_instructions: 'Recibiras un correo electronico con instrucciones acerca de como restaurar tú contraseña en unos cuantos minutos.'
+      updated: 'Tu contraseña ha cambiado exitosamente. Tu sesión ya ha sido iniciada.'
+    confirmations:
+      send_instructions: 'Recibiras un correo con instrucciones acerca de como confirmar tu cuenta en unos cuantos minutos.'
+      confirmed: 'Tu cuenta ha sido confirmada exitosamente. Tu sesión ya ha sido iniciada.'
+    registrations:
+      signed_up: 'Bienvenido! te has registrado exitosamente.'
+      inactive_signed_up: 'Te has registrado exitosamente. Sin embargo, no pudimos iniciar tu sesisión por que %{reason}.'
+      updated: 'Actualizaste tu cuenta exitosamente.'
+      destroyed: 'Adios! Tu cuenta ha sido cancelada exitosamente. Esperamos verte pronto por aquí de nuevo.Your account was successfully cancelled.'
+    unlocks:
+      send_instructions: 'Recibiras un correo con instrucciones acerca de como desbloquear tu cuenta en unos minutos.'
+      unlocked: 'Tu cuenta ha sido desbloqueada exitosamente. Tu sesión ya ha sido iniciada.'
+    omniauth_callbacks:
+      success: 'Exitosamente autrizado como %{kind} de cuenta.'
+      failure: 'No podemos autorizarte como %{kind} por que "%{reason}".'
+    mailer:
+      confirmation_instructions:
+        subject: 'Instrucciones de confirmación'
+      reset_password_instructions:
+        subject: 'Instrucciones para restaurar contraseña'
+      unlock_instructions:
+        subject: 'Instrucciones para desbloquear'
