@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :timeoutable, :confirmable, :lockable
 
+  validates_presence_of   :username
+  validates_uniqueness_of :username
+  validates_format_of     :username, :with => /\A[a-z\-_.]+\Z/i
+
   attr_accessor :login
   attr_accessible :login, :username, :email, :password, :password_confirmation, :remember_me
 

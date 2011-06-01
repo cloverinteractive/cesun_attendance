@@ -13,3 +13,14 @@ es:
 
   placeholders:
     login_explanation: 'nombre de usuario ó correo eléctronico'
+
+  links:
+    sessions:
+      sign_in: 'Iniciar sesión'
+    registrations:
+      forgot_password:  '¿Olvidaste tu contraseña?'
+      sign_up:          'Registrarte'
+    confirmations:
+      no_instructions:  '¿No recibio las instrucciones de confirmación?'
+    unlocks:
+      no_instructions:  '¿No recibio las instrucciones de desbloqueo?'
