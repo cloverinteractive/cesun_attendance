@@ -131,3 +131,42 @@
 #devise_links {
   padding: 10px;
 }
+
+.columns {
+  margin: 25px auto;
+  padding: 10px 0;
+  width: 960px;
+  border-bottom: 1px solid #EEE;
+  border-top: 1px solid #EEE;
+
+  .column {
+    width: 440px;
+    padding: 5px;
+  }
+
+  .column.main {
+    float: left;
+  }
+
+  .column.secondary {
+    float: right;
+  }
+}
+
+fieldset {
+  form {
+    label {
+      display: block;
+      font-weight: bold;
+      line-height: 19px;
+      padding: 5px 0;
+    }
+
+    .text {
+      padding: 5px;
+      border: 1px solid #BBB;
+      width: 90%;
+    }
+  }
+
+}

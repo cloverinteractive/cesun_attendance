@@ -1,21 +1,30 @@
-<h2>Sign up</h2>
+<div class="columns">
+  <div class="column main">
+    <fieldset>
+      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+        <%= f.label :email %>
+        <%= f.email_field :email %>
 
-  <p><%= f.label :email %><br />
-  <%= f.email_field :email %></p>
+        <%= f.label :username %>
+        <%= f.email_field :username %>
 
-  <p><%= f.label :username %><br />
-  <%= f.email_field :username %></p>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
 
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
 
-  <p><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></p>
+        <%= f.submit "Sign up" %>
+      <% end %>
+    </fieldset>
+  </div>
 
-  <p><%= f.submit "Sign up" %></p>
-<% end %>
+  <div class="column secondary">
+    <p>Advice pending ...</p>
+  </div>
+  <div class="clear"></div>
+</div>
 
 <%= render :partial => "devise/shared/links" %>
