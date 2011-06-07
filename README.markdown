@@ -1,5 +1,7 @@
 == Welcome to Rails
 
+Scroll down to see a 'how to run on windows' section.
+
 Rails is a web-application framework that includes everything needed to create
 database-backed web applications according to the Model-View-Control pattern.
 
@@ -311,6 +313,7 @@ You should see different changes concerning the database, it means it went throu
 
 
 If you haven't installed rails yet, we need to install it with the following command:
+
 ```
 gem install rails
 ```
