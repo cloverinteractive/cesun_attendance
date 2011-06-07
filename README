@@ -254,3 +254,82 @@ vendor
   External libraries that the application depends on. Also includes the plugins
   subdirectory. If the app has frozen rails, those gems also go here, under
   vendor/rails/. This directory is in the load path.
+
+---
+
+To install and run on windows
+===
+
+Download the "Ruby installer" (i used the Ruby 1.9.2-p180 installer) and the Development kit from 
+
+http://rubyinstaller.org/downloads/
+
+Install ruby and follow the instructions on how to install the devkit on: 
+
+https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
+
+once it is installed open up a console window and do: 
+
+```
+gem install bundler
+```
+
+Close and open up a new command window and then go to the project's main directory and execute the following line:
+
+```
+bundle install --without production
+```
+
+We add the lineswitch ```--without production``` because it fails when building the mysql extension
+
+If you see:
+
+```Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.```
+
+it means that the installation when on successfully
+
+We need to download the sqlite library before we continue:
+
+Download the zip file from: 
+http://www.sqlite.org/sqlitedll-3_7_3.zip
+
+copy the files to the ruby path on the bin directory for example the ```C:\Ruby192\bin``` directory where "Ruby192" is your ruby folder and version number.
+
+it should answer with: 
+
+```
+Run "rake db:migrate" to update your database then try again.
+```
+
+We do what it indicates on the command window: 
+
+```
+rake db:migrate
+```
+
+You should see different changes concerning the database, it means it went through successfully.
+
+
+If you haven't installed rails yet, we need to install it with the following command:
+```
+gem install rails
+```
+
+Executing on windows
+---
+
+On a command window execute:
+
+```
+rails server
+```
+
+you should see something like: 
+
+```
+INFO  WEBrick::HTTPServer#start: pid=6564 port=3000
+```
+
+After this open up a browser window and type in: ```localhost:3000``` and go.
+
+You should see the web application's login screen.
