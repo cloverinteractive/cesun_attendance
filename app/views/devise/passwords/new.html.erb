@@ -1,12 +1,20 @@
-<h2>Forgot your password?</h2>
+<div class="columns">
+  <div class="column main">
+    <fieldset>
+      <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+        <%= devise_error_messages! %>
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
-  <%= devise_error_messages! %>
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+        <%= f.submit "Send me reset password instructions" %>
+      <% end %>
+    </fieldset>
+  </div>
 
-  <p><%= f.label :email %><br />
-  <%= f.email_field :email %></p>
-
-  <p><%= f.submit "Send me reset password instructions" %></p>
-<% end %>
+  <div class="column secondary">
+    <p>Advice pending...</p>
+  </div>
+  <div class="clear"></div>
+</div>
 
 <%= render :partial => "devise/shared/links" %>
