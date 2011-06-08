@@ -1,0 +1,11 @@
+script: "bundle exec rake db:drop db:create db:migrate test"
+notifications:
+  recipients:
+    - enrique@cloverinteractive.com
+    - flexcel@gmail.com
+    - bernalgas@gmail.com
+    - adan.alvarado7@gmail.com
+    - adris.cardenas@gmail.com
+    - hvcasas@gmail.com
+    - ochmendoza@gmail.com
+    - tectijuana@gmail.com
