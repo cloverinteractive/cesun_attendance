@@ -5,3 +5,12 @@ require 'mocha'
 
 class ActiveSupport::TestCase
 end
+
+class ActionController::TestCase
+  include Devise::TestHelpers
+
+  def sign_in_with_role( user, role )
+    user.has_role! role
+    sign_in user
+  end
+end

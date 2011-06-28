@@ -1,4 +1,8 @@
 en:
+  users:
+    edit:
+      header: 'Edit user roles'
+
   links:
     sessions:
       sing_in: 'Sign in'
@@ -9,3 +13,5 @@ en:
       no_instructions: "Didn't receive confirmation instructions?"
     unlocks:
       no_instructions: "Didn't receive unlock instructions?"
+  messages:
+    unauthorized_access: 'You have tried to reach a page you are not authorized to.'

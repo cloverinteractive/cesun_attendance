@@ -11,12 +11,17 @@ es:
         email:                  'Correo eléctronico'
         remember_me:            'Recordarme'
 
+  users:
+    edit:
+      header: 'Editar usuario'
+
   placeholders:
     login_explanation: 'nombre de usuario ó correo eléctronico'
 
   links:
     sessions:
       sign_in: 'Iniciar sesión'
+      sign_out: 'Cerrar sesión'
     registrations:
       forgot_password:  '¿Olvidaste tu contraseña?'
       sign_up:          'Registrarte'
@@ -24,3 +29,11 @@ es:
       no_instructions:  '¿No recibio las instrucciones de confirmación?'
     unlocks:
       no_instructions:  '¿No recibio las instrucciones de desbloqueo?'
+  headers:
+    actions: 'Operaciones'
+  messages:
+    unauthorized_access: 'Haz intentado ingresar en una página para la cual no tienes los permisos necesarios.'
+
+  labels:
+    hello: 'Hola'
+    not_you?: 'No eres tu?'

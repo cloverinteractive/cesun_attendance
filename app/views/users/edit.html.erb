@@ -1,0 +1,22 @@
+<% content_for :head do %>
+  <script type="text/javascript">
+    $( function() { $( '#role_token_list' ).tokenInput( '/users/role_list.json', { crossDomain: false, theme: 'facebook' } ); } );
+  </script>
+<% end %>
+
+<h1><%= t '.header' %></h1>
+<fieldset>
+  <%= form_for @user do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.label :role_tokens %>
+    <%= f.text_field :role_tokens, :id => 'role_token_list', 'data-pre' => @user.roles.map(&:attributes).to_json  %>
+
+    <%= f.submit %>
+  <% end %>
+</fieldset>
+<%= link_to t('links.back'), users_path %>

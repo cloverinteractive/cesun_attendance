@@ -58,4 +58,15 @@ class UserTest < ActiveSupport::TestCase
     assert @user.update_attributes :username => @custom_username
     assert @custom_username, @user.username
   end
+
+  test "user can have roles" do
+    assert @user.respond_to? :has_role?
+    assert !@user.has_role?( :admin )
+  end
+
+  test "user can be assigned to one role" do
+    assert @user.respond_to? :has_role!
+    assert @user.has_role!( :admin )
+    assert @user.has_role?( :admin )
+  end
 end

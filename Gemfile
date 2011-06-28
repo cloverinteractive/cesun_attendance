@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.7'
+gem 'rails', '3.0.9'
 gem 'client_side_validations', '3.0.2'
 gem 'kaminari'
 gem 'compass', ">= 0.11.1"

@@ -5,8 +5,18 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username
   validates_format_of     :username, :with => /\A[a-z\-_.]+\Z/i
 
-  attr_accessor :login
-  attr_accessible :login, :username, :email, :password, :password_confirmation, :remember_me
+  attr_accessor   :login, :role_tokens
+  attr_accessible :login, :username, :email, :password, :password_confirmation, :remember_me, :role_tokens
+
+  acts_as_authorization_subject :association_name => :roles
+
+  def role_names
+    roles.map { |role| role.name.titleize }.join(', ')
+  end
+
+  def role_tokens=(ids)
+    self.role_ids = ids.split( ',' )
+  end
 
   protected
 

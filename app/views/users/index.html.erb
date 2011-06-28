@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <th><%= t 'activerecord.attributes.username' %></th>
+      <th><%= t 'activerecord.attributes.email' %></th>
+      <th><%= t 'activerecord.attributes.roles' %></th>
+      <th><%= t 'headers.actions' %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr class="<%= cycle(:odd, :even) %>">
+        <td><%= user.username %></td>
+        <td><%= user.email %></td>
+        <td><%= user.role_names %></td>
+        <td>
+          <%= link_to t('links.edit'), edit_user_path( user ) %> |
+          <%= link_to t('links.delete'), user_path(user), :method => :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,11 @@
+<div id="account">
+  <% if user_signed_in? %>
+    <%= t 'labels.hello' %>
+    <%= link_to current_user.username, edit_user_registration_path %>
+    <%= t 'labels.not_you?' %>
+    <%= link_to t('links.sessions.sign_out'), destroy_user_session_path %>
+  <% else %>
+    <%= link_to t('links.sessions.sign_in'), new_user_session_path %>
+    <%= link_to t('links.registrations.sign_up'), new_user_registration_path %>
+  <% end %>
+</div>

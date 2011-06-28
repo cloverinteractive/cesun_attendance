@@ -10,7 +10,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110524033856) do
+ActiveRecord::Schema.define(:version => 20110615032422) do
+
+  create_table "roles", :force => true do |t|
+    t.string  "name",              :limit => 40
+    t.string  "authorizable_type", :limit => 40
+    t.integer "authorizable_id"
+  end
+
+  add_index "roles", ["authorizable_id"], :name => "index_roles_on_authorizable_id"
+  add_index "roles", ["authorizable_type"], :name => "index_roles_on_authorizable_type"
+  add_index "roles", ["name", "authorizable_id", "authorizable_type"], :name => "index_roles_on_name_and_authorizable_id_and_authorizable_type", :unique => true
+  add_index "roles", ["name"], :name => "index_roles_on_name"
+
+  create_table "roles_users", :id => false, :force => true do |t|
+    t.integer "user_id"
+    t.integer "role_id"
+  end
+
+  add_index "roles_users", ["role_id"], :name => "index_roles_users_on_role_id"
+  add_index "roles_users", ["user_id", "role_id"], :name => "index_roles_users_on_user_id_and_role_id", :unique => true
+  add_index "roles_users", ["user_id"], :name => "index_roles_users_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false

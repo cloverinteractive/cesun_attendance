@@ -3,11 +3,36 @@
 @import "blueprint/fancy-type";
 
 @charset "utf-8";
+$heading_color: #3979A1;
+$document_fonts: arial,helvetica,freesans,clean,sans-serif;
+
+html body {
+  font: 13.34px $document_fonts;
+}
 
 #heading {
-  background-color: #3979A1;
+  background-color: $heading_color;
   height: 49px;
   width: 100%;
+
+  #account {
+    padding: 15px;
+    color: #fff;
+
+    a {
+      color: #fff;
+      background-color: darken( $heading_color, 5% );
+      border: 1px solid darken( $heading_color, 10% );
+      text-decoration: none;
+      padding: 3px 5px;
+      @include border-radius;
+
+      &:hover {
+        background-color: darken($heading_color, 15%);
+        color: #fff;
+      }
+    }
+  }
 }
 
 #wrapper {
@@ -20,7 +45,7 @@
   @include border_radius();
 
   a {
-    color: #3979A1;
+    color: $heading_color;
     font-weight: bold;
     text-decoration: none;
   }
@@ -39,10 +64,10 @@
       @include border-radius();
     }
 
-    a.selected { background-color: #3979A1; }
+    a.selected { background-color: $heading_color; }
 
     a:hover {
-      background-color: #3979A1;
+      background-color: $heading_color;
     }
   }
 
@@ -53,7 +78,6 @@
 }
 
 #page_content {
-  margin-top: 50px;
   padding: 0 10px;
 
   table {
@@ -75,7 +99,7 @@
     }
 
     thead tr th{
-      background-color: #3979A1;
+      background-color: $heading_color;
       padding: 10px;
       color: #fff;
       text-align: left;
@@ -106,7 +130,7 @@
 
     input {
       padding: 5px;
-      border: 1px solid #3979A1;
+      border: 1px solid $heading_color;
     }
   }
 }
@@ -167,6 +191,9 @@ fieldset {
       border: 1px solid #BBB;
       width: 90%;
     }
-  }
 
+    input[type=submit] {
+      margin: 5px 0;
+    }
+  }
 }
