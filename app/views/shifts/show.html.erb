@@ -1,0 +1,7 @@
+<fieldset>
+  <%= t 'activerecord.attributes.shift.description' %>:
+  <%= @shift.description %>
+</fieldset>
+
+<%= link_to t('links.edit'), edit_shift_path(@shift) %> |
+<%= link_to t('links.list'), shifts_path %>

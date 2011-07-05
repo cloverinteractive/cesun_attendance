@@ -12,5 +12,6 @@ CesunAttendance::Application.routes.draw do
   end
 
   resources :study_plans
+  resources :shifts
   resources :users, :only => :destroy
 end

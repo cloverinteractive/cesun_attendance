@@ -15,3 +15,4 @@ en:
       no_instructions: "Didn't receive unlock instructions?"
   messages:
     unauthorized_access: 'You have tried to reach a page you are not authorized to.'
+    are_you_sure: 'Are you sure?'

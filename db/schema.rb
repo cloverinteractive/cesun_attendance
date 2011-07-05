@@ -38,6 +38,13 @@ ActiveRecord::Schema.define(:version => 20110712015224) do
   add_index "roles_users", ["user_id", "role_id"], :name => "index_roles_users_on_user_id_and_role_id", :unique => true
   add_index "roles_users", ["user_id"], :name => "index_roles_users_on_user_id"
 
+  create_table "shifts", :force => true do |t|
+    t.string   "description"
+    t.integer  "assigments_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "study_plans", :force => true do |t|
     t.string   "name",       :null => false
     t.integer  "campus_id",  :null => false

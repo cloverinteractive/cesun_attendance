@@ -3,6 +3,7 @@ es:
     models:
       user: 'Usuario'
       study_plan: 'Plan de estudio'
+      shift: 'Turno'
     attributes:
       user:
         login:                  'Cuenta'
@@ -14,6 +15,8 @@ es:
       study_plan:
         name:   'Nombre'
         campus: 'Campus'
+      shift:
+        description: 'Descripción'
 
   users:
     edit:
@@ -44,6 +47,7 @@ es:
   messages:
     unauthorized_access: 'Haz intentado ingresar en una página para la cual no tienes los permisos necesarios.'
     success: 'La operacion ha concluido con exito.'
+    are_you_sure: '¿Estas seguro?'
 
   labels:
     hello: 'Hola'

@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th><%= t 'activerecord.attributes.shift.description' %></th>
+      <th><%= t 'headers.actions' %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @shifts.each do |shift| %>
+      <tr class="<%= cycle('odd', 'even') %>" >
+        <td><%= shift.description %></td>
+        <td>
+          <%= link_to t('links.show'), shift %> |
+          <%= link_to t('links.edit'), edit_shift_path(shift) %> |
+          <%= link_to t('links.delete'), shift, :confirm => t('messages.are_you_sure'), :method => :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('links.new'), new_shift_path %>
