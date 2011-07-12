@@ -1,9 +1,9 @@
 <table>
   <thead>
     <tr>
-      <th><%= t 'activerecord.attributes.username' %></th>
-      <th><%= t 'activerecord.attributes.email' %></th>
-      <th><%= t 'activerecord.attributes.roles' %></th>
+      <th><%= t 'activerecord.attributes.user.username' %></th>
+      <th><%= t 'activerecord.attributes.user.email' %></th>
+      <th><%= t 'activerecord.attributes.user.roles' %></th>
       <th><%= t 'headers.actions' %></th>
     </tr>
   </thead>
@@ -21,3 +21,6 @@
     <% end %>
   </tbody>
 </table>
+
+<%= paginate @users %>
+<%= link_to t('links.new'), new_study_plan_path %>

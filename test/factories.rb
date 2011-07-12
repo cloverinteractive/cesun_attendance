@@ -4,3 +4,12 @@ Factory.define :user do |u|
   u.password  'supersecret'
   u.confirmed_at Time.now
 end
+
+Factory.define :campus do |c|
+  c.sequence( :name ) { |n| "campus #{n}" }
+end
+
+Factory.define :study_plan do |s|
+  s.sequence( :name ) { |n| "study plan #{n}" }
+  s.association :campus
+end

@@ -2,6 +2,7 @@ es:
   activerecord:
     models:
       user: 'Usuario'
+      study_plan: 'Plan de estudio'
     attributes:
       user:
         login:                  'Cuenta'
@@ -10,6 +11,9 @@ es:
         username:               'Nombre de usuario'
         email:                  'Correo eléctronico'
         remember_me:            'Recordarme'
+      study_plan:
+        name:   'Nombre'
+        campus: 'Campus'
 
   users:
     edit:
@@ -19,6 +23,12 @@ es:
     login_explanation: 'nombre de usuario ó correo eléctronico'
 
   links:
+    list: 'Volver a la lista'
+    edit: 'Editar'
+    new:  'Nuevo'
+    show: 'Mostrar'
+    delete: 'Eliminar'
+
     sessions:
       sign_in: 'Iniciar sesión'
       sign_out: 'Cerrar sesión'
@@ -33,6 +43,7 @@ es:
     actions: 'Operaciones'
   messages:
     unauthorized_access: 'Haz intentado ingresar en una página para la cual no tienes los permisos necesarios.'
+    success: 'La operacion ha concluido con exito.'
 
   labels:
     hello: 'Hola'
