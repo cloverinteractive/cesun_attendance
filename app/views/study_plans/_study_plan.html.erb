@@ -1,0 +1,11 @@
+<fieldset>
+  <%= form_for @study_plan do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    
+    <%= f.label :campus %>
+    <%= f.select :campus_id, Campus.all.map { |c| [ c.name.titleize, c.id ] } %>
+    
+    <%= f.submit %>
+  <% end %>
+</fieldset>
