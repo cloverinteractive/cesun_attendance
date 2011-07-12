@@ -1,6 +1,7 @@
 if Rails.env.development?
   User.delete_all
   Role.delete_all
+  Campus.delete_all
 end
 
 %w/admin coordinator student_control teacher/.each { |role| Role.create! :name => role }
@@ -8,3 +9,5 @@ admin = User.new :username => 'admin', :password => 'administrator', :email => '
 admin.confirmed_at = Time.now
 admin.save!
 admin.has_role! :admin
+
+%w/morelos sierra/.each { |campus| Campus.create! :name => campus }
