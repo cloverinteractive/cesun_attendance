@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :set_user, :only => [ :edit, :update ]
+  before_filter :set_user, :only => [ :edit, :update, :destroy ]
 
   access_control do
     allow :admin
@@ -22,6 +22,11 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @user.destroy
+    redirect_to users_path
   end
 
   private

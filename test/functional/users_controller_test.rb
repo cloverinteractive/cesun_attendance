@@ -13,7 +13,7 @@ class UsersControllerTest < ActionController::TestCase
       assert_redirected_to new_user_session_path
     end
   end
-  
+
   test "admin can reach index" do
     sign_in_with_role @user, :admin
 
@@ -47,7 +47,7 @@ class UsersControllerTest < ActionController::TestCase
     assert @user.reload.has_role?( :teacher )
     assert_redirected_to users_path
   end
-  
+
   test "admin can updte user with password" do
     assert old_hash = @user.encrypted_password
 
@@ -56,5 +56,15 @@ class UsersControllerTest < ActionController::TestCase
     assert assigns( :user )
     assert_equal @user, assigns( :user )
     assert_not_equal old_hash, @user.reload.encrypted_password
+  end
+
+  test "admin can delete user" do
+    sign_in_with_role @user, :admin
+
+    assert_difference 'User.count', -1 do
+      delete :destroy, :id => @user.id
+      assert assigns( :user )
+      assert_equal @user, assigns( :user )
+    end
   end
 end
