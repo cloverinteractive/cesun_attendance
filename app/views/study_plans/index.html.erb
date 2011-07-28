@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th><%= t 'activerecord.attributes.study_plan.name' %></th>
+      <th><%= t 'activerecord.attributes.study_plan.campus' %></th>
+      <th><%= t 'headers.actions' %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @study_plans.each do |plan| %>
+      <tr class="<%= cycle(:odd, :even) %>">
+        <td><%= plan.name %></td>
+        <td><%= plan.campus %></td>
+        <td>
+          <%= link_to t('links.edit'), edit_study_plan_path( plan ) %> |
+          <%= link_to t('links.delete'), study_plan_path( plan ), :method => :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @study_plans %>
+<%= link_to t('links.new'), new_study_plan_path %>
