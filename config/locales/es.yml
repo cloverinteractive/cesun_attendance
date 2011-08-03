@@ -5,6 +5,7 @@ es:
       study_plan: 'Plan de estudio'
       shift: 'Turno'
       profession: 'Carrera'
+      assignment: 'Materia'
     attributes:
       user:
         login:                  'Cuenta'
@@ -21,6 +22,10 @@ es:
       profession:
         name: 'Nombre'
         code: 'Codigo'
+      assignment:
+        name: 'Nombre'
+        code: 'Código'
+        term: 'Cuatrimestre'
 
   users:
     edit:

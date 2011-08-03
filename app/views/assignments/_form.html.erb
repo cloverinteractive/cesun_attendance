@@ -1,0 +1,14 @@
+<fieldset>
+  <%= form_for(@assignment) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :code %>
+    <%= f.text_field :code %>
+
+    <%= f.label :term %>
+    <%= f.text_field :term %>
+
+    <%= f.submit %>
+  <% end %>
+</fieldset>

@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th><%= t 'activerecord.attributes.assignment.name' %></th>
+      <th><%= t 'activerecord.attributes.assignment.code' %></th>
+      <th><%= t 'activerecord.attributes.assignment.term' %></th>
+      <th><%= t 'headers.actions' %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @assignments.each do |assignment| %>
+      <tr>
+        <td><%= assignment.name %></td>
+        <td><%= assignment.code %></td>
+        <td><%= assignment.term %></td>
+        <td>
+          <%= link_to t('links.show'), assignment %>
+          <%= link_to t('links.edit'), edit_assignment_path(assignment) %>
+          <%= link_to t('links.delete'), assignment, :confirm => t('messages.are_you_sure'), :method => :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('links.new'), new_assignment_path %>

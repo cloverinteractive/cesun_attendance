@@ -15,4 +15,5 @@ CesunAttendance::Application.routes.draw do
   resources :shifts
   resources :professions, :except => :show
   resources :users, :only => :destroy
+  resources :assignments
 end

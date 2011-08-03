@@ -12,6 +12,14 @@
 
 ActiveRecord::Schema.define(:version => 20110712015224) do
 
+  create_table "assignments", :force => true do |t|
+    t.string   "name"
+    t.string   "code"
+    t.string   "term"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "campus", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
