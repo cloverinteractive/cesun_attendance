@@ -22,3 +22,9 @@ Factory.define :profession do |p|
   p.sequence(:code) {|n| "code#{n}"}
   p.sequence(:name) {|n| "name#{n}"}
 end
+
+Factory.define :assignment do |a|
+  a.name      'proyecto integrador'
+  a.code      '01ID0804'
+  a.term      '8vo'
+end

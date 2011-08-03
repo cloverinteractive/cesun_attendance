@@ -18,6 +18,8 @@ class User < ActiveRecord::Base
     self.role_ids = ids.split( ',' )
   end
 
+  has_many :assignments
+
   protected
 
   def self.send_reset_password_instructions(attributes={})
