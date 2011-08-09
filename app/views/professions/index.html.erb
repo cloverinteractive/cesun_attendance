@@ -1,0 +1,52 @@
+<div id="page_content">
+	<h1><%= t 'activerecord.models.profession' %></h1>
+	<%- if notice -%>
+       <%- if notice.respond_to?('each') -%>
+          <%- notice.each do |key, msg| -%>
+		    <p class="notice"><%= msg %></p>
+	      <%- end -%>
+	    <%- else -%>
+		  <p class="notice"><%= notice %></p>
+	  <%- end -%>
+	<%- end -%>
+	
+	<%= link_to t('links.new'),  new_profession_path %>
+	<% if @professions %>
+		<table cellpadding="0" cellspacing="0"  class="professions" >
+			<tr>
+				<th>
+					<%= t 'activerecord.attributes.profession.name' %>
+				</th>
+				<th>
+					<%= t 'activerecord.attributes.profession.code' %>
+				</th>
+				<th>
+					
+				</th>
+				<th>
+					
+				</th>
+			</tr>
+			<% @professions.each do |p| %>
+				<tr>
+					<td>
+						<%= p.name %>
+					</td>
+					<td>
+						<%= p.code %>
+					</td>
+					<td>
+						
+					</td>
+					<td>
+						
+						<%= link_to t('links.edit'), edit_profession_path(p) %>
+					</td>
+					<td>
+						<%= link_to t('links.delete'),p, :confirm => t('messages.are_you_sure'), :method => :delete %>
+					</td>
+				</tr>
+			<% end %>
+		</table>
+	<% end %>
+</div>

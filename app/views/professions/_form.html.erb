@@ -1,0 +1,35 @@
+﻿
+
+<%= form_for(@profession) do |f| %>
+	<fieldset>
+		<legend>
+			<%= t('activerecord.models.profession') %>
+		</legend>
+		<% if @profession.errors.any? %>
+		  <div id="errorExplanation">
+			<h2><%= pluralize(@profession.errors.count, "error") %> <%= t('messages.operation_error') %>:</h2>
+			<ul>
+			<% @profession.errors.full_messages.each do |msg| %>
+			  <li><%= msg %></li>
+			<% end %>
+			</ul>
+		  </div>
+		  <% end %>
+		
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<%= f.label :name %><br />
+					<%= f.text_field :name %>
+				</td>
+				<td>
+					<%= f.label :code %><br />
+					<%= f.text_field :code %>
+				</td>
+				<td>
+					 <%= f.submit %>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+<% end %>
