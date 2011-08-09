@@ -1,0 +1,13 @@
+﻿<fieldset>
+  <legend><%= t('activerecord.models.profession') %></legend>
+  <%= form_for(@profession) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :code %>
+    <%= f.text_field :code %>
+
+    <%= f.submit %>
+  <% end %>
+</fieldset>
+

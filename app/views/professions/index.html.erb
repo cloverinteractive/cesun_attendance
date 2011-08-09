@@ -1,0 +1,25 @@
+<h1><%= t 'activerecord.models.profession' %></h1>
+
+<table cellpadding="0" cellspacing="0"  class="professions" >
+  <thead>
+    <tr>
+      <th><%= t 'activerecord.attributes.profession.name' %></th>
+      <th><%= t 'activerecord.attributes.profession.code' %></th>
+      <th><%= t 'headers.actions' %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @professions.each do |p| %>
+      <tr class="<%= cycle(:odd, :even) %>">
+        <td><%= p.name %></td>
+        <td><%= p.code %></td>
+        <td>
+          <%= link_to t('links.edit'), edit_profession_path(p) %>
+          <%= link_to t('links.delete'),p, :confirm => t('messages.are_you_sure'), :method => :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('links.new'),  new_profession_path %>

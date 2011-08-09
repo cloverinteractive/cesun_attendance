@@ -4,6 +4,7 @@ es:
       user: 'Usuario'
       study_plan: 'Plan de estudio'
       shift: 'Turno'
+      profession: 'Carrera'
     attributes:
       user:
         login:                  'Cuenta'
@@ -17,6 +18,9 @@ es:
         campus: 'Campus'
       shift:
         description: 'Descripción'
+      profession:
+        name: 'Nombre'
+        code: 'Codigo'
 
   users:
     edit:
@@ -48,6 +52,7 @@ es:
     unauthorized_access: 'Haz intentado ingresar en una página para la cual no tienes los permisos necesarios.'
     success: 'La operacion ha concluido con exito.'
     are_you_sure: '¿Estas seguro?'
+    operation_error: 'No fue posible realizar la operacion'
 
   labels:
     hello: 'Hola'
