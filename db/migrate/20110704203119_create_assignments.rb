@@ -4,6 +4,10 @@ class CreateAssignments < ActiveRecord::Migration
       t.string :name
       t.string :code
       t.string :term
+      t.references :shift
+      t.references :profesion
+      t.references :checkins
+      t.references :study_plan
       t.timestamps
     end
   end
