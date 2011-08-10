@@ -17,3 +17,8 @@ end
 Factory.define :shift do |f|
   f.description 'test123'
 end
+
+Factory.define :profession do |p|
+  p.sequence(:code) {|n| "code#{n}"}
+  p.sequence(:name) {|n| "name#{n}"}
+end

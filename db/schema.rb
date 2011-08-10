@@ -18,6 +18,13 @@ ActiveRecord::Schema.define(:version => 20110712015224) do
     t.datetime "updated_at"
   end
 
+  create_table "professions", :force => true do |t|
+    t.string   "name"
+    t.string   "code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "roles", :force => true do |t|
     t.string  "name",              :limit => 40
     t.string  "authorizable_type", :limit => 40
