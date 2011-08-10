@@ -21,12 +21,6 @@ es:
       profession:
         name: 'Nombre'
         code: 'Codigo'
-    errors:
-      models:
-        profession:
-          attributes:
-            code:
-              too_short: 'codigo demasiado corto'
 
   users:
     edit:
